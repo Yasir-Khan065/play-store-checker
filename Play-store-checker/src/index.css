@@ -1,3 +1,95 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+html,
+body,
+#root {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+textarea,
+input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  html,
+  body,
+  #root {
+    background: #fff !important;
+    color: #000 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  .no-print,
+  header button,
+  header .live-indicator,
+  footer,
+  .keyword-tabs-controls {
+    display: none !important;
+  }
+
+  /* Force single-column linear layout for print */
+  main {
+    display: block !important;
+    overflow: visible !important;
+    height: auto !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  section,
+  aside {
+    display: block !important;
+    width: 100% !important;
+    overflow: visible !important;
+    height: auto !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    border: 1px solid #d4d4d8 !important;
+    border-radius: 6px !important;
+    margin-bottom: 10mm;
+  }
+
+  textarea,
+  input {
+    border: 1px solid #d4d4d8 !important;
+    background: #fff !important;
+    color: #000 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    resize: none !important;
+  }
+
+  /* Reveal full description content (no scroll in print) */
+  textarea {
+    white-space: pre-wrap !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Cards keep clean borders, no shadows */
+  [class*="rounded-xl"],
+  [class*="rounded-2xl"] {
+    box-shadow: none !important;
+  }
+
+  .print-break-before {
+    page-break-before: always;
+    break-before: page;
+  }
+}
