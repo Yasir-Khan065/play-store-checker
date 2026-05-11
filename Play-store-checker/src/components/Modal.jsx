@@ -25,13 +25,13 @@ export default function Modal({ open, onClose, children, ariaLabel }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-xl border border-zinc-200"
+        className="relative w-full max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-[24px] shadow-[0_24px_60px_-20px_rgba(16,24,40,0.35)] border border-[#E8EAF2]"
       >
         <button
           type="button"
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-md text-zinc-400 hover:text-zinc-700 hover:bg-zinc-100 transition-colors"
+          className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-lg text-[#8A94A6] hover:text-[#1F2937] hover:bg-[#F4F3FF] transition-all duration-200"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path

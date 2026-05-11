@@ -31,7 +31,7 @@ export default function CsvExportButton({ rows }) {
       type="button"
       onClick={handleCopy}
       disabled={!rows.length}
-      className="text-[10px] font-semibold px-2 py-1 rounded-md border border-indigo-200 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 hover:border-indigo-300 disabled:opacity-40 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
+      className="text-[10px] font-semibold px-2.5 py-1.5 rounded-full border border-[#E0DEFF] bg-[#F4F3FF] text-[#6C63FF] hover:bg-[#E8E6FF] hover:border-[#C4BFFF] disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 whitespace-nowrap"
     >
       {copied ? "Copied!" : "Copy CSV"}
     </button>

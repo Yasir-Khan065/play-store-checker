@@ -9,14 +9,44 @@ body,
   text-size-adjust: 100%;
 }
 
+html,
+body {
+  background: #f7f8fc;
+}
+
 body {
   overscroll-behavior-y: none;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1f2937;
 }
 
 textarea,
 input {
   -webkit-appearance: none;
   appearance: none;
+}
+
+/* Soft custom scrollbars for the right panel + textareas */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: #e8eaf2;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #c4bfff;
+  background-clip: padding-box;
+  border: 2px solid transparent;
 }
 
 @media print {
@@ -84,7 +114,9 @@ input {
 
   /* Cards keep clean borders, no shadows */
   [class*="rounded-xl"],
-  [class*="rounded-2xl"] {
+  [class*="rounded-2xl"],
+  [class*="rounded-[20px]"],
+  [class*="rounded-[24px]"] {
     box-shadow: none !important;
   }
 
